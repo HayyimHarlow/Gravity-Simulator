@@ -1,3 +1,7 @@
+import random
+import matplotlib.pyplot as plot
+from mpl_toolkits.mplot3d import Axes3D
+
 def plot_output(bodies, max_range = 1e13):
     fig = plot.figure()
     colours = ['r','b','g','y','m','c']
