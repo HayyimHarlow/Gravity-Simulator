@@ -2,7 +2,7 @@ import random
 import matplotlib.pyplot as plot
 from mpl_toolkits.mplot3d import Axes3D
 
-def plot_output(bodies, max_range = 1e13):
+def plot_output(bodies, max_range = 1e13, outfile = None):
     fig = plot.figure()
     colours = ['r','b','g','y','m','c']
     ax = fig.add_subplot(1,1,1, projection='3d')
@@ -12,4 +12,7 @@ def plot_output(bodies, max_range = 1e13):
     for body in bodies: 
         ax.plot(body["x"], body["y"], body["z"], c = random.choice(colours))
     
-    plot.show()
+    if outfile:
+        plot.savefig(outfile)
+    else:
+        plot.show()
