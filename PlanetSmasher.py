@@ -193,16 +193,16 @@ def run_simulation(integrator, names = None, number_of_steps = 10000, report_fre
 #planet data (location (m), mass (kg), velocity (m/s)
 sun = {"location":point(0,0,0), "mass":2e30, "velocity":point(0,0,0)}
 mercury = {"location":point(0,5.0e10,0), "mass":3.285e23, "velocity":point(47000,0,0)}
-venus = {"location":point(0,1.1e11,0), "mass":4.8e24, "velocity":point(35000,0,0)}
-earth = {"location":point(0,1.5e11,1e10), "mass":6e24, "velocity":point(30000,0,0)}
-mars = {"location":point(0,2.2e11,0), "mass":6.4e23, "velocity":point(24000,0,0)}
-jupiter = {"location":point(0,7.7e11,0), "mass":1e28, "velocity":point(13000,0,0)}
-saturn = {"location":point(0,1.4e12,0), "mass":5.7e26, "velocity":point(9000,0,0)}
-uranus = {"location":point(0,2.8e12,0), "mass":8.7e25, "velocity":point(6835,0,0)}
-neptune = {"location":point(0,4.5e12,0), "mass":1e26, "velocity":point(5477,0,0)}
-pluto = {"location":point(0,3.7e12,0), "mass":1.3e22, "velocity":point(4748,0,0)}
+#venus = {"location":point(0,1.1e11,0), "mass":4.8e24, "velocity":point(35000,0,0)}
+#earth = {"location":point(0,1.5e11,1e10), "mass":6e24, "velocity":point(30000,0,0)}
+#mars = {"location":point(0,2.2e11,0), "mass":6.4e23, "velocity":point(24000,0,0)}
+#jupiter = {"location":point(0,7.7e11,0), "mass":1e28, "velocity":point(13000,0,0)}
+#saturn = {"location":point(0,1.4e12,0), "mass":5.7e26, "velocity":point(9000,0,0)}
+#uranus = {"location":point(0,2.8e12,0), "mass":8.7e25, "velocity":point(6835,0,0)}
+#neptune = {"location":point(0,4.5e12,0), "mass":1e26, "velocity":point(5477,0,0)}
+#pluto = {"location":point(0,3.7e12,0), "mass":1.3e22, "velocity":point(4748,0,0)}
 
-sat =  { "location": point(0, 1.0e10, 0), "mass":1e23, "velocity":point(3e4, 0, 0)}
+#sat =  { "location": point(0, 1.0e10, 0), "mass":1e23, "velocity":point(3e4, 0, 0)}
 
 if __name__ == "__main__":
 
@@ -210,14 +210,14 @@ if __name__ == "__main__":
     bodies = [
         body( location = sun["location"], mass = sun["mass"], velocity = sun["velocity"], name = "sun"),
         body( location = mercury["location"], mass = mercury["mass"], velocity = mercury["velocity"], name = "sun"),
-        body( location = venus["location"], mass = venus["mass"], velocity = venus["velocity"], name = "sun"),
-        body( location = earth["location"], mass = earth["mass"], velocity = earth["velocity"], name = "earth"),
-        body( location = mars["location"], mass = mars["mass"], velocity = mars["velocity"], name = "mars"),
-        body( location = saturn["location"], mass = saturn["mass"], velocity = saturn["velocity"], name = "saturn"),
-        body( location = jupiter["location"], mass = jupiter["mass"], velocity = jupiter["velocity"], name = "jupiter"),
-        body( location = uranus["location"], mass = uranus["mass"], velocity = uranus["velocity"], name = "uranus"),
-        body( location = neptune["location"], mass = neptune["mass"], velocity = neptune["velocity"], name = "neptune"),
-        body( location = pluto["location"], mass = pluto["mass"], velocity = pluto["velocity"], name = "pluto")
+ #       body( location = venus["location"], mass = venus["mass"], velocity = venus["velocity"], name = "sun"),
+ #       body( location = earth["location"], mass = earth["mass"], velocity = earth["velocity"], name = "earth"),
+ #       body( location = mars["location"], mass = mars["mass"], velocity = mars["velocity"], name = "mars"),
+ #       body( location = saturn["location"], mass = saturn["mass"], velocity = saturn["velocity"], name = "saturn"),
+ #       body( location = jupiter["location"], mass = jupiter["mass"], velocity = jupiter["velocity"], name = "jupiter"),
+ #       body( location = uranus["location"], mass = uranus["mass"], velocity = uranus["velocity"], name = "uranus"),
+ #       body( location = neptune["location"], mass = neptune["mass"], velocity = neptune["velocity"], name = "neptune"),
+ #       body( location = pluto["location"], mass = pluto["mass"], velocity = pluto["velocity"], name = "pluto")
         ]
     
     integrator = RK4_integrator(time_step = 10, bodies = bodies)
